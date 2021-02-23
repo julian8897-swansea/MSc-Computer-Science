@@ -5,10 +5,13 @@ elm:
 ---
 
 ```elm {l=hidden}
+import VegaLite exposing (..)
+```
+
+```elm {l=hidden}
 data =
-    dataFromColumns []
-        << dataColumn "language" (strs [ "Java", "C", "C++", "Python", "C#" ])
-        << dataColumn "rating" (nums [ 15.8, 13.6, 7.2, 5.8, 5.3 ])
+    dataFromUrl "https://gicentre.github.io/data/tiobeIndexMay2018.csv"
+
 ```
 
 Top 5 programming languages according to the [TIOBE index](https://www.tiobe.com/tiobe-index).
