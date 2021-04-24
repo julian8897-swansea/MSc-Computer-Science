@@ -16,6 +16,19 @@ public class LinkedList
 		head = newNode;
 	}
 	
+	 /* Returns count of nodes in linked list */
+    public int getCount()
+    {
+        Node temp = head;
+        int counter = 0;
+        while (temp != null)
+        {
+            counter++;
+            temp = temp.nextNode;
+        }
+        return counter;
+    }
+	
 	//toString Method to print information of linked list
 	public String toString() {
 		String output = "Start of Linked List:\n";
